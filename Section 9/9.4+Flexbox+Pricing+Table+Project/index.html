@@ -13,7 +13,7 @@
     height: 100%;
 }
       body {
-        display:flex;
+        display:inline-flex;
         font-family: "Sono", sans-serif;
         height: 100%;
         justify-content: center;
@@ -26,7 +26,7 @@
       }
 
       .pricing-plan{
-        display: flex;
+        display: inline-flex;
         background-color: lightgray;
         padding: 15px;
         border-radius: 1rem;
@@ -66,52 +66,12 @@
 
 
       /* Hint: What can you do with a media query and flexbox? */
-      @media (max-width: 680px) {
-
+      @media (max-width: 1250px) {
         .pricing-container{
         display: flex;
         align-items: center;
         flex-direction: column;
         gap:20px;
-      }
-
-      .pricing-plan{
-        display: flex;
-        background-color: lightgray;
-        padding: 15px;
-        border-radius: 1rem;
-        min-width: 350px;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .plan-title{
-        text-align: center;
-        font-weight: bolder;
-        font-size:24px;
-      }
-      .plan-price{
-        text-align: center;
-        font-weight: bold;
-        font-size: 48px;
-      }
-      .plan-features{
-        padding: 0;
-        margin:0;
-        list-style-type: none;
-        text-align: center;
-      }
-
-      .plan-features > li{
-        margin: 10px;
-      }
-
-      .plan-button{
-        background-color: rgb(255, 123, 0);
-        color: white;
-        border: 0;
-        padding:10px;
-        border-radius: 1ch;
-        align-self: center;
       }
 
       }
@@ -120,6 +80,7 @@
 
   <body>
     <div class="pricing-container">
+      
       <div class="pricing-plan">
         <div class="plan-title">Basic</div>
         <div class="plan-price">$9.99/month</div>

@@ -9,12 +9,9 @@
 
   <body>
     <form action="/add" method="post">
-      <input
-        type="text"
-        name="country"
-        autofocus
-        placeholder="<%= locals.error ? error :  'Enter country name'%>"
-      />
+      <input type="text" name="country" autofocus placeholder="<%=
+      locals.isDuplicated? "Country has already been added" : locals.exist?
+      "Please enter the country name": "Country does not exist"%>" />
       <button type="submit">Add</button>
     </form>
 
@@ -908,7 +905,7 @@
         />
       </svg>
     </section>
-    <h2 class="total-count">Total Countries: <%=total%></h2>
+    <h2 class="total-count">Total Countries: <%=locals.total%></h2>
     <script>
       const country_codes = "<%= countries %>".split(",");
       console.log(typeof "<%= countries %>");
